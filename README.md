@@ -1,2 +1,2 @@
 # cypress-test
-Qa Academy  Avanade - Poc de apresentação
+Qa Academy  Avanade - Poc apresentada
