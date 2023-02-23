@@ -34,6 +34,11 @@ When ("acesso a tela produtos", () => {
 })
 
 Then ("adiciono menos itens no carrinho", () => {
-    cart.acessarTelaCarrinhoErro();
+    cart.acessarTelaCarrinho();
 })
+
+
+Then(/^valido o título "([^"]*)" na tela$/, (titulo) => {
+	cart.validarTitulo(titulo);
+});
 

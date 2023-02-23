@@ -30,11 +30,14 @@ class products {
     cy.screenshot();
   }
 
-  acessarTelaCarrinhoErro() {
+  acessarTelaCarrinho() {
     cy.get('.shopping_cart_link')
-      .click()
-      .get('.title')
-      .should('have.text', 'Your art');
+      .click();
+  }
+
+  validarTitulo(titulo){
+    cy.get('.title')
+    .should('have.text',titulo );
   }
 }
 

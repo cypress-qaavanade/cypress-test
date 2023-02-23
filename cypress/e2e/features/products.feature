@@ -12,4 +12,5 @@ Scenario: Criar erro
 Given realizando o login
 When acesso a tela produtos
 Then adiciono menos itens no carrinho
+And valido o título "Your cart" na tela
 
