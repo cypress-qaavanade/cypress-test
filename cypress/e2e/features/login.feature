@@ -1,7 +1,7 @@
 Feature: Login
 
-Scenario: Realizando login
-Given acesso o ambiente de teste 
-When informo user and password 
-Then sou conectado no ambiente
+Scenario: logging in
+Given access the test environment
+When inform user and password
+Then I'm connected in the environment
 

@@ -3,42 +3,42 @@ import cart from '../page/products.page'
 import testdata from '../../../cypress.env.example.json';
 
 
-Given ("realizo login", () => {
+Given ("I login ", () => {
     cy.cmd_acessarAmbienteTeste();
     cy.cmd_informarUsuarioSenha(testdata.user, testdata.password);
 })
 
-When ("acesso a tela de produtos", () => {
+When ("access to product screen", () => {
     cy.cmd_validarLoginSucesso();
 })
 
-Then ("Adiciono os itens no carrinho", () => {
+Then ("Add items to cart", () => {
     cart.adicionarProdutos();
 })
 
-Then ("acesso a tela de carrinho ", () => {
+Then ("cart screen access ", () => {
     cart.acessarTelaCarrinho();
 })
 
-Then ("valido que os itens foram adicionados no carrinho", () => {
+Then ("I validate that the items have been added to the cart", () => {
     cart.validarContemItensCarrinho();
 })
 
-Given ("realizando o login", () => {
+Given ("logging in", () => {
     cy.cmd_acessarAmbienteTeste();
     cy.cmd_informarUsuarioSenha(testdata.user, testdata.password);
 })
 
-When ("acesso a tela produtos", () => {
+When ("access to products screen", () => {
     cy.cmd_validarLoginSucesso();
 })
 
-Then ("adiciono menos itens no carrinho", () => {
+Then ("cart screen access", () => {
     cart.acessarTelaCarrinho();
 })
 
 
-Then(/^valido o título "([^"]*)" na tela$/, (titulo) => {
+Then(/^validate the title "([^"]*)" on the screen$/, (titulo) => {
 	cart.validarTitulo(titulo);
 });
 

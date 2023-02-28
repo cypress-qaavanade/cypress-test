@@ -3,20 +3,20 @@ import cart from '../page/cart.page'
 import testdata from '../../../cypress.env.example.json';
 
 
-Given ("realizo login no sistema", () => {
+Given ("I login", () => {
     cy.cmd_acessarAmbienteTeste();
     cy.cmd_informarUsuarioSenha(testdata.user, testdata.password);
     cy.cmd_validarLoginSucesso();
 })
 
-When ("acesso a tela de carrinho", () => {
+When ("I validate that the items have been add to the cart", () => {
     cart.acessarTelaCarrinho();
 })
 
-Then ("removo os itens do carrinho", () => {
+Then ("remove items from cart", () => {
     cart.removerItensCarrinho()
 })
 
-Then ("valido que os produtos foram removidos com sucesso do carrinho", () => {
+Then ("validated that the products were successfully removed from the cart", () => {
     cart.validarNaoContemItensCarrinho()
 })

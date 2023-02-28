@@ -1,13 +1,13 @@
 import {Given, When, Then} from '@badeball/cypress-cucumber-preprocessor';
 import color from '../page/color.page'
 
-Given('acesso o ambiente de compra', () => {
+Given('access to the shopping environment', () => {
  color.acessandoambiente()
 })
-When('visualizo os botões add to card', () => {
+When('I visualize the add to card buttons', () => {
 color.nomebtn()
 })
 
-Then('eles devem estar na cor vermelha', () => {
+Then('they must be in red color', () => {
 color.color()
 })
