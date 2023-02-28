@@ -55,4 +55,4 @@ Plugins used to implement the page object in the version of cypress 12.3.0
 <br>
 <br>
 
-# Bibliografia
+# Bibliography
